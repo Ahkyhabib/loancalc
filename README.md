@@ -26,16 +26,15 @@ Example of props:  {...}
         maxA={100000}   - max value  of amount of loan slider in currancy choosen , default - $10000
         minA={10000}   - min value of duration of loan slider in moths , default - 12
 
-This will be changed according to the current interest rate  
-  
-  
- ===APR DEPENDS on CREDIT HIOSTORY, YOU CAN SET TO YOUR OWN RATE===
-  
- APR1={3.3} in % , EXCELLENT
+This will be changed according to the current interest rate
+
+===APR DEPENDS on CREDIT HIOSTORY, YOU CAN SET TO YOUR OWN RATE===
+
+APR1={3.3} in % , EXCELLENT
 APR2={9.6} in % , GOOD
 APR3={17.4} in % , FAIR
-  
- currancy={$},   - currancy , default $
+
+currancy={$},   - currancy , default $
 
         ======MATH========
         /**
@@ -47,3 +46,9 @@ APR3={17.4} in % , FAIR
          console.log('total amount: ' +  Math.round(totalAmountToRepay).toFixed(2));
          console.log('monthly inst: '+ Math.round(monthly).toFixed(2));
          */
+
+Uncomment this code to show interest rate in ./compoents/Rightside.js:
+
+ <!-- <h4>APR</h4>
+
+<span className="aprDisplay">{this.props.APR}%</span>  -->
