@@ -13,6 +13,10 @@ How to run it locally from command line
 - run npm install
 - npm start
 
+If there's any error on \$ npm install, run this command:
+
+\$ npm audit fix -force
+
  <LoanCalculator /> 
  
 Example of props:  {...}
