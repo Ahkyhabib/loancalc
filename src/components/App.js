@@ -5,6 +5,7 @@ import SliderAmount from "./SliderAmount";
 import SliderDuration from "./SliderDuration";
 import RightSide from "./RightSide";
 import SliderValue from "./SliderValue";
+import FormAmount from './FormAmount';
 
 class LoanCalculator extends Component {
   constructor(props) {
@@ -203,6 +204,14 @@ class LoanCalculator extends Component {
         <Row>
           <Col className="leftSide" xs={12} md={6}>
             <Form horizontal>
+              <FormAmount 
+                value={this.state.valueAmount}
+                min={this.state.minAmount}
+                max={this.state.maxAmount}
+                onChange={this.update.bind(this)}
+                // step={this.state.stepAmount}
+                currancy={this.props.currancy}
+              />
               <SliderAmount
                 value={this.state.valueAmount}
                 min={this.state.minAmount}
@@ -211,14 +220,14 @@ class LoanCalculator extends Component {
                 step={this.state.stepAmount}
                 currancy={this.props.currancy}
               />
-              <SliderValue
+              {/* <SliderValue
                 value={this.state.valueValue}
                 min={this.state.minValue}
                 max={this.state.maxValue}
                 onChange={this.update.bind(this)}
                 step={this.state.stepValue}
                 currancy={this.props.currancy}
-              />
+              /> */}
               <SliderDuration
                 value={this.state.valueDuration}
                 min={this.state.minDuration}
@@ -275,7 +284,7 @@ LoanCalculator.defaultProps = {
   minD: 12,
 
   valueV: 50000,
-  stepV: 1000,
+  stepV: 10000,
   maxV: 500000,
   minV: 30000,
 

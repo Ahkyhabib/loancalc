@@ -39,6 +39,7 @@ class RightSide extends Component {
         </ButtonGroup>
         <ButtonToolbar className="next" justified>
           <Button
+            bsSize="large" 
             bsStyle="success"
             onClick={this.props.btnOnClick}
             href="https://www.rocketmortgage.com/?gclid=Cj0KCQiAmafhBRDUARIsACOKEROp6oOPmUaJVuOtYH0Jgi2YtluSt1MVAsZv4i4KIo5I5ql8_sVOJCoaAsJxEALw_wcB&qls=RBA_rocketme.0000000013&ef_id=Cj0KCQiAmafhBRDUARIsACOKEROp6oOPmUaJVuOtYH0Jgi2YtluSt1MVAsZv4i4KIo5I5ql8_sVOJCoaAsJxEALw_wcB:G:s&s_kwcid=AL!1083!3!320194990266!e!!g!!rocket%20mortgage&gclsrc=aw.ds"
