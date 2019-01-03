@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "../css/App.css";
 import { Grid, Row, Col, Form } from "react-bootstrap";
-import SliderAmount from "./SliderAmount";
-import SliderDuration from "./SliderDuration";
+//import SliderAmount from "./SliderAmount";
+//import SliderDuration from "./SliderDuration";
 import RightSide from "./RightSide";
-import SliderValue from "./SliderValue";
-import FormAmount from './FormAmount';
+//import SliderValue from "./SliderValue";
+import FormAmount from "./FormAmount";
+import FormValue from "./FormValue";
+import FormDuration from "./FormDuration";
 
 class LoanCalculator extends Component {
   constructor(props) {
@@ -57,7 +59,7 @@ class LoanCalculator extends Component {
           e.target.value
       );
     }
-    if (changedID === "sliderValue") {
+    if (changedID === "formAmount") {
       this.setState({ valueValue: e.target.value });
       console.log("EVENT TIME: " + this.getNewDate());
       console.log(
@@ -151,7 +153,7 @@ class LoanCalculator extends Component {
     else if (id === "sliderAmount") {
       amount = parseFloat(value);
       duration = parseFloat(this.state.valueDuration);
-    } else if (id === "sliderValue") {
+    } else if (id === "formAmont") {
       value = parseFloat(value);
       duration = parseFloat(this.state.valueValue);
     }
@@ -204,15 +206,15 @@ class LoanCalculator extends Component {
         <Row>
           <Col className="leftSide" xs={12} md={6}>
             <Form horizontal>
-              <FormAmount 
+              <FormAmount
                 value={this.state.valueAmount}
                 min={this.state.minAmount}
                 max={this.state.maxAmount}
-                onChange={this.update.bind(this)}
-                // step={this.state.stepAmount}
+                onChange={this.handleChange}
+                step={this.state.stepAmount}
                 currancy={this.props.currancy}
               />
-              <SliderAmount
+              <FormValue
                 value={this.state.valueAmount}
                 min={this.state.minAmount}
                 max={this.state.maxAmount}
@@ -220,6 +222,22 @@ class LoanCalculator extends Component {
                 step={this.state.stepAmount}
                 currancy={this.props.currancy}
               />
+              <FormDuration
+                value={this.state.valueAmount}
+                min={this.state.minAmount}
+                max={this.state.maxAmount}
+                onChange={this.update.bind(this)}
+                step={this.state.stepAmount}
+                currancy={this.props.currancy}
+              />
+              {/* <SliderAmount
+                value={this.state.valueAmount}
+                min={this.state.minAmount}
+                max={this.state.maxAmount}
+                onChange={this.update.bind(this)}
+                step={this.state.stepAmount}
+                currancy={this.props.currancy}
+              /> */}
               {/* <SliderValue
                 value={this.state.valueValue}
                 min={this.state.minValue}
@@ -228,13 +246,13 @@ class LoanCalculator extends Component {
                 step={this.state.stepValue}
                 currancy={this.props.currancy}
               /> */}
-              <SliderDuration
+              {/* <SliderDuration
                 value={this.state.valueDuration}
                 min={this.state.minDuration}
                 max={this.state.maxDuration}
                 onChange={this.update.bind(this)}
                 step={this.state.stepDuration}
-              />
+              /> */}
             </Form>
             <Col className="logo" sm={12}>
               Rocket Mortgage
@@ -283,7 +301,7 @@ LoanCalculator.defaultProps = {
   maxD: 72,
   minD: 12,
 
-  valueV: 50000,
+  valueV: 10000,
   stepV: 10000,
   maxV: 500000,
   minV: 30000,
