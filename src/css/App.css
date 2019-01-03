@@ -55,7 +55,7 @@ col.form-padding {
 /* =========== RIGHT SIDE ==============*/
 .rightSide {
   text-align: center;
-  padding-top: 75px;
+  padding-top: 0;
 }
 
 .rightSide h4 {
@@ -77,7 +77,7 @@ col.form-padding {
 }
 
 .next {
-  padding: 50px 20px 20px 225px;
+  padding: 50px 20px 20px 200px;
 }
 
 /* =========== INPUT CSS =================*/

@@ -24,10 +24,10 @@ class FormDuration extends Component {
               type="text"
               placeholder="2,000"
             />
-            <div id="amountValueDisplay">
+            {/* <div id="amountValueDisplay">
               {/* {this.props.currancy} */}
-              {/* {this.props.value} */}
-            </div>
+            {/* {this.props.value} }
+            </div> */}
           </Col>
         </Row>
       </FormGroup>
