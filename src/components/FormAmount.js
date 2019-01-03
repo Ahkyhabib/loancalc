@@ -9,10 +9,10 @@ class FormAmount extends Component {
           <Col className="form-padding" sm={12}>
             <Row>
               <Col className="labelSlider" xs={12} sm={4}>
-                Debt Amount
+                Mortgage Balance
               </Col>
               <Col className="descSlider" xs={12} sm={6}>
-                Overall debt owed?
+                How much do you owe?
               </Col>
             </Row>
           </Col>
@@ -23,7 +23,7 @@ class FormAmount extends Component {
               className="border-color"
               id="formAmount"
               type="text"
-              placeholder="10,000"
+              placeholder="50,000"
             />
             {/* <div id="amountValueDisplay">
               {this.props.currancy}

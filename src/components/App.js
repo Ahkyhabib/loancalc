@@ -264,7 +264,7 @@ class LoanCalculator extends Component {
               /> */}
             </Form>
             <Col className="logo" sm={12}>
-              Rocket Mortgage
+              LogoHere
             </Col>
           </Col>
 

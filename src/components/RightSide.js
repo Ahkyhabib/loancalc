@@ -5,7 +5,7 @@ class RightSide extends Component {
   render() {
     return (
       <Col className="rightSide" xs={12} md={6}>
-        <h4>Current monthly payments</h4>
+        <h4>Overall debt amount</h4>
         <span className="totalAmountDisplay">
           {this.props.currancy}
           {this.props.amount}

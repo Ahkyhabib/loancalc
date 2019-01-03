@@ -19,10 +19,11 @@ class FormDuration extends Component {
 
           <Col sm={12}>
             <input
+            onChange={this.props.onChange}
               className="border-color"
               id="formAmount"
               type="text"
-              placeholder="2,000"
+              placeholder="2,500"
             />
             {/* <div id="amountValueDisplay">
               {/* {this.props.currancy} */}
