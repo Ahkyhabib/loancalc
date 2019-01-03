@@ -19,6 +19,7 @@ class FormAmount extends Component {
 
           <Col sm={12}>
             <input
+              onChange={this.props.onChange}
               className="border-color"
               id="formAmount"
               type="text"

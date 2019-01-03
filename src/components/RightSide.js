@@ -43,7 +43,7 @@ class RightSide extends Component {
             Fair
           </Button>
         </ButtonGroup>
-        <ButtonToolbar className="next" justified>
+        <ButtonToolbar className="next">
           <Button
             bsSize="large"
             bsStyle="success"

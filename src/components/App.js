@@ -13,6 +13,10 @@ class LoanCalculator extends Component {
   constructor(props) {
     super(props);
 
+    this.handleChange = this.handleChange.bind(this);
+    this.getNewDate = this.getNewDate.bind(this);
+    this.calculate = this.calculate.bind(this);
+
     // SET STARTER CALCULATUION
 
     let MPR = this.props.APR1 / 100 / 12;
@@ -23,6 +27,7 @@ class LoanCalculator extends Component {
 
     // save props values in to the state
     this.state = {
+      testProperty: '',
       valueAmount: this.props.valueA,
       stepAmount: this.props.stepA,
       maxAmount: this.props.maxA,
@@ -33,7 +38,7 @@ class LoanCalculator extends Component {
       maxDuration: this.props.maxD,
       minDuration: this.props.minD,
 
-      valueValue: this.props.valeueV,
+      valueValue: this.props.valueV,
       stepValue: this.props.stepV,
       maxValue: this.props.maxV,
       minValue: this.props.minV,
@@ -140,6 +145,10 @@ class LoanCalculator extends Component {
     return event_date;
   }
 
+  handleChange(event) {
+    this.setState({ testProperty: event.target.value })
+  }
+
   calculate(id, value) {
     let amount, duration;
     let MPR = this.state.APR / 100 / 12; // MPR monthly APR for calculation
@@ -195,9 +204,9 @@ class LoanCalculator extends Component {
   }
 
   /**
-     
+
      * =========== RENDER INCASE OF CMS =======
-     
+
      * @returns {XML}
      */
   render() {
@@ -207,7 +216,7 @@ class LoanCalculator extends Component {
           <Col className="leftSide" xs={12} md={6}>
             <Form horizontal>
               <FormAmount
-                value={this.state.valueAmount}
+                value={this.state.testProperty}
                 min={this.state.minAmount}
                 max={this.state.maxAmount}
                 onChange={this.handleChange}
@@ -261,7 +270,7 @@ class LoanCalculator extends Component {
 
           <RightSide
             currancy={this.props.currancy}
-            amount={this.state.amountToRepay}
+            amount={this.state.testProperty}
             monthly={this.state.monthlyInst}
             APR={this.state.APR}
             btnOnClick={this.update.bind(this)}
