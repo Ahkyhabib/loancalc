@@ -2,7 +2,7 @@
   margin-top: 30px;
   background-color: #fff;
   color: #000;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* ======== LEFT SIDE ==============*/
@@ -15,18 +15,18 @@
 .labelSlider {
   text-align: center;
   background-color: #0275d8;
-  padding: 0px 6px;
+  padding: 0px 0px;
   border-radius: 5px;
   color: #f3f3f3;
   min-width: 120px;
   font-size: 20px;
-  margin-bottom: 75px;
+  margin-bottom: 60px;
   transition: all 1s;
   margin-left: auto;
   margin-right: auto;
 }
 .descSlider {
-  padding: 10px 22px;
+  padding: 0 2px 0 0;
   /* color: #000; */
 }
 
@@ -52,10 +52,49 @@ col.form-padding {
   padding-bottom: 0;
 }
 
+#vetStat {
+  border-color: #4caf50;
+  border-width: 2px;
+  color: #2a6495;
+  margin-top: 40px;
+}
+#Fair {
+  margin-top: 40px;
+  border-color: #4caf50;
+  border-width: 2px;
+  color: #2a6495;
+}
+#Good {
+  margin-top: 40px;
+  border-color: #4caf50;
+  border-width: 2px;
+  color: #2a6495;
+}
+#Excellent {
+  margin-top: 40px;
+  border-color: #4caf50;
+  border-width: 2px;
+  color: #2a6495;
+}
+.title {
+  text-align: center;
+  background-color: #0275d8;
+  padding: 0px 0px;
+  border-radius: 5px;
+  color: #f3f3f3;
+  min-width: 120px;
+  font-size: 20px;
+  transition: all 1s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 /* =========== RIGHT SIDE ==============*/
 .rightSide {
   text-align: center;
-  padding-top: 0;
+  
 }
 
 .rightSide h4 {
@@ -79,6 +118,8 @@ col.form-padding {
 .next {
   padding: 50px 20px 20px 200px;
 }
+
+
 
 /* =========== INPUT CSS =================*/
 input[type="range"] {

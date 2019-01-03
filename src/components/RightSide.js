@@ -26,23 +26,8 @@ class RightSide extends Component {
         {/* <h4>APR</h4>
                 <span className="aprDisplay">{this.props.APR}%</span> */}
 
-        <h4>Your Credit History</h4>
+        
 
-        <ButtonGroup justified>
-          <Button
-            bsStyle="primary"
-            id="Excellent"
-            onClick={this.props.btnOnClick}
-          >
-            Excellent
-          </Button>
-          <Button bsStyle="primary" id="Good" onClick={this.props.btnOnClick}>
-            Good
-          </Button>
-          <Button bsStyle="primary" id="Fair" onClick={this.props.btnOnClick}>
-            Fair
-          </Button>
-        </ButtonGroup>
         <ButtonToolbar className="next">
           <Button
             bsSize="large"

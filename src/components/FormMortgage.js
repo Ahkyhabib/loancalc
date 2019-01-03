@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Row, Col, FormGroup } from "react-bootstrap";
 
-class FormAmount extends Component {
+class FormMortgage extends Component {
   render() {
     return (
       <FormGroup>
-        <Row>
+        <Row  id="rowpad" style={{ paddingBottom: 0}}>
           <Col className="form-padding" sm={12}>
             <Row>
               <Col className="labelSlider" xs={12} sm={4}>
@@ -25,10 +25,6 @@ class FormAmount extends Component {
               type="text"
               placeholder="50,000"
             />
-            {/* <div id="amountValueDisplay">
-              {this.props.currancy}
-              {this.props.value}
-            </div> */}
           </Col>
         </Row>
       </FormGroup>
@@ -36,4 +32,4 @@ class FormAmount extends Component {
   }
 }
 
-export default FormAmount;
+export default FormMortgage;

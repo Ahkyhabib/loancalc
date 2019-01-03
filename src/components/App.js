@@ -5,9 +5,11 @@ import { Grid, Row, Col, Form } from "react-bootstrap";
 //import SliderDuration from "./SliderDuration";
 import RightSide from "./RightSide";
 //import SliderValue from "./SliderValue";
-import FormAmount from "./FormAmount";
-import FormValue from "./FormValue";
-import FormDuration from "./FormDuration";
+import FormMortgage from "./FormMortgage";
+import FormDebt from "./FormDebt";
+import FormPayment from "./FormPayment";
+import FormBorrow from './FormBorrow';
+import FormStatus from './FormStatus'
 
 class LoanCalculator extends Component {
   constructor(props) {
@@ -215,7 +217,7 @@ class LoanCalculator extends Component {
         <Row>
           <Col className="leftSide" xs={12} md={6}>
             <Form horizontal>
-              <FormAmount
+              <FormMortgage
                 value={this.state.testProperty}
                 min={this.state.minAmount}
                 max={this.state.maxAmount}
@@ -223,7 +225,7 @@ class LoanCalculator extends Component {
                 step={this.state.stepAmount}
                 currancy={this.props.currancy}
               />
-              <FormValue
+              <FormDebt
                 value={this.state.valueAmount}
                 min={this.state.minAmount}
                 max={this.state.maxAmount}
@@ -231,7 +233,8 @@ class LoanCalculator extends Component {
                 step={this.state.stepAmount}
                 currancy={this.props.currancy}
               />
-              <FormDuration
+              {/* <FormOther /> */}
+              <FormPayment
                 value={this.state.valueAmount}
                 min={this.state.minAmount}
                 max={this.state.maxAmount}
@@ -239,6 +242,9 @@ class LoanCalculator extends Component {
                 step={this.state.stepAmount}
                 currancy={this.props.currancy}
               />
+              
+              <FormBorrow />
+              <FormStatus />
               {/* <SliderAmount
                 value={this.state.valueAmount}
                 min={this.state.minAmount}
