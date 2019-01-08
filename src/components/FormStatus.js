@@ -26,7 +26,7 @@ class FormStatus extends Component {
         </ButtonGroup>
       </Col>
       
-          <Col className="rightSide" xs={12} md={6}>
+      <Col className="rightSide" xs={12} md={6}>
           <h5 className="labelSlider" id="vet">Veteran Staus</h5>
              <ButtonGroup justified>
              <Button 
