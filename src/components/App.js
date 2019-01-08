@@ -28,21 +28,6 @@ class LoanCalculator extends Component {
     // save props values in to the state
     this.state = {
       testProperty: '',
-      valueAmount: this.props.valueA,
-      stepAmount: this.props.stepA,
-      maxAmount: this.props.maxA,
-      minAmount: this.props.minA,
-
-      valueDuration: this.props.valueD,
-      stepDuration: this.props.stepD,
-      maxDuration: this.props.maxD,
-      minDuration: this.props.minD,
-
-      valueValue: this.props.valueV,
-      stepValue: this.props.stepV,
-      maxValue: this.props.maxV,
-      minValue: this.props.minV,
-
       APR: this.props.APR1,
       amountToRepay: Math.round(totalAmountToRepay).toFixed(),
       monthlyInst: Math.round(monthly).toFixed()
@@ -53,6 +38,7 @@ class LoanCalculator extends Component {
     // Assign to let changedID ID of slider which has been changed
     let changedID = e.target.id;
     let value = e.target.value;
+    //Changes the duration of time to pay loan back (sliderAmont)
     if (changedID === "sliderAmount") {
       this.setState({ valueAmount: e.target.value });
       console.log("EVENT TIME: " + this.getNewDate());
@@ -210,31 +196,9 @@ class LoanCalculator extends Component {
         <Row>
           <Col className="leftSide" xs={12} md={6}>
             <Form horizontal>
-              <FormMortgage
-                value={this.state.testProperty}
-                min={this.state.minAmount}
-                max={this.state.maxAmount}
-                onChange={this.handleChange}
-                step={this.state.stepAmount}
-                currancy={this.props.currancy}
-              />
-              <FormDebt
-                value={this.state.valueAmount}
-                min={this.state.minAmount}
-                max={this.state.maxAmount}
-                onChange={this.update.bind(this)}
-                step={this.state.stepAmount}
-                currancy={this.props.currancy}
-              />
-              {/* <FormOther /> */}
-              <FormPayment
-                value={this.state.valueAmount}
-                min={this.state.minAmount}
-                max={this.state.maxAmount}
-                onChange={this.update.bind(this)}
-                step={this.state.stepAmount}
-                currancy={this.props.currancy}
-              />
+              <FormMortgage/>
+              <FormDebt />
+              <FormPayment />
               <FormBorrow />
               <FormStatus />
               <FormDuration />
@@ -253,49 +217,12 @@ class LoanCalculator extends Component {
     );
   }
 }
-//  Assign Types for props
-LoanCalculator.propTypes = {
-  valueD: React.PropTypes.number,
-  stepD: React.PropTypes.number,
-  maxD: React.PropTypes.number,
-  minD: React.PropTypes.number,
 
-  valueV: React.PropTypes.number,
-  stepV: React.PropTypes.number,
-  maxV: React.PropTypes.number,
-  minV: React.PropTypes.number,
-
-  valueA: React.PropTypes.number,
-  stepA: React.PropTypes.number,
-  maxA: React.PropTypes.number,
-  minA: React.PropTypes.number,
-  APR1: React.PropTypes.number,
-  APR2: React.PropTypes.number,
-  APR3: React.PropTypes.number,
-  currancy: React.PropTypes.string
-};
 
 // Assign deafault values to props
 
 LoanCalculator.defaultProps = {
-  valueD: 24,
-  stepD: 12,
-  maxD: 72,
-  minD: 12,
-
-  valueV: 10000,
-  stepV: 10000,
-  maxV: 500000,
-  minV: 30000,
-
-  valueA: 10000,
-  stepA: 500,
-  maxA: 100000,
-  minA: 10000,
-
-  APR1: 3.3,
-  APR2: 9.6,
-  APR3: 17.4,
+  
 
   currancy: "$"
 };
