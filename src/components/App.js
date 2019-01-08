@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import "../css/App.css";
 import { Grid, Row, Col, Form } from "react-bootstrap";
-//import SliderAmount from "./SliderAmount";
-//import SliderDuration from "./SliderDuration";
 import RightSide from "./RightSide";
-//import SliderValue from "./SliderValue";
 import FormMortgage from "./FormMortgage";
 import FormDebt from "./FormDebt";
 import FormPayment from "./FormPayment";
 import FormBorrow from './FormBorrow';
-import FormStatus from './FormStatus'
+import FormStatus from './FormStatus';
+import FormDuration from './FormDuration';
 
 class LoanCalculator extends Component {
   constructor(props) {
@@ -205,12 +203,7 @@ class LoanCalculator extends Component {
     this.setState({ monthlyInst: monthly });
   }
 
-  /**
-
-     * =========== RENDER INCASE OF CMS =======
-
-     * @returns {XML}
-     */
+  
   render() {
     return (
       <Grid className="show-grid mainContainer">
@@ -242,36 +235,10 @@ class LoanCalculator extends Component {
                 step={this.state.stepAmount}
                 currancy={this.props.currancy}
               />
-              
               <FormBorrow />
               <FormStatus />
-              {/* <SliderAmount
-                value={this.state.valueAmount}
-                min={this.state.minAmount}
-                max={this.state.maxAmount}
-                onChange={this.update.bind(this)}
-                step={this.state.stepAmount}
-                currancy={this.props.currancy}
-              /> */}
-              {/* <SliderValue
-                value={this.state.valueValue}
-                min={this.state.minValue}
-                max={this.state.maxValue}
-                onChange={this.update.bind(this)}
-                step={this.state.stepValue}
-                currancy={this.props.currancy}
-              /> */}
-              {/* <SliderDuration
-                value={this.state.valueDuration}
-                min={this.state.minDuration}
-                max={this.state.maxDuration}
-                onChange={this.update.bind(this)}
-                step={this.state.stepDuration}
-              /> */}
+              <FormDuration />
             </Form>
-            <Col className="logo" sm={12}>
-              LogoHere
-            </Col>
           </Col>
 
           <RightSide

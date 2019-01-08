@@ -9,10 +9,10 @@ class FormDebt extends Component {
           <Col className="form-padding" sm={12}>
             <Row>
               <Col className="labelSlider" xs={12} sm={4}>
-                Credit Card Debt/Other
+                Credit Debt 
               </Col>
               <Col className="descSlider" xs={12} sm={6}>
-                How much do you owe on your credit cards?
+                How much do you owe?
               </Col>
             </Row>
           </Col>

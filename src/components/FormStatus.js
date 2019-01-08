@@ -8,7 +8,7 @@ class FormStatus extends Component {
       <Row> 
            
       <Col className="rightSide" xs={12} md={6}>
-      <h5 className="title">Your Credit History</h5>
+      <h5 className="labelSlider">Your Credit History</h5>
         <ButtonGroup justified>
           <Button
             bsStyle="default"
@@ -27,7 +27,7 @@ class FormStatus extends Component {
       </Col>
       
           <Col className="rightSide" xs={12} md={6}>
-          <h5 className="title" id="vet">Veteran Staus</h5>
+          <h5 className="labelSlider" id="vet">Veteran Staus</h5>
              <ButtonGroup justified>
              <Button 
                bsStyle="default"

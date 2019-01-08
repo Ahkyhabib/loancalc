@@ -5,7 +5,7 @@ class FormMortgage extends Component {
   render() {
     return (
       <FormGroup>
-        <Row  id="rowpad" style={{ paddingBottom: 0}}>
+        <Row  className="fpadding" style={{ paddingBottom: 0}}>
           <Col className="form-padding" sm={12}>
             <Row>
               <Col className="labelSlider" xs={12} sm={4}>

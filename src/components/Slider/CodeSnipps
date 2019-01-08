@@ -1,0 +1,38 @@
+=======Slider Code Snippits====
+
+
+Render()
+{/* <SliderAmount
+                value={this.state.valueAmount}
+                min={this.state.minAmount}
+                max={this.state.maxAmount}
+                onChange={this.update.bind(this)}
+                step={this.state.stepAmount}
+                currancy={this.props.currancy}
+              /> */}
+              {/* <SliderValue
+                value={this.state.valueValue}
+                min={this.state.minValue}
+                max={this.state.maxValue}
+                onChange={this.update.bind(this)}
+                step={this.state.stepValue}
+                currancy={this.props.currancy}
+              /> */}
+              {/* <SliderDuration
+                value={this.state.valueDuration}
+                min={this.state.minDuration}
+                max={this.state.maxDuration}
+                onChange={this.update.bind(this)}
+                step={this.state.stepDuration}
+              /> */}
+
+
+====If you want to show logo=====
+{/* <Col className="logo" sm={12}>
+              LogoHere
+            </Col> */}   
+
+====To import file====
+//import SliderAmount from "./SliderAmount";
+//import SliderDuration from "./SliderDuration";  
+//import SliderValue from "./SliderValue";         
