@@ -13,13 +13,14 @@ class LoanCalculator extends Component {
   constructor(props) {
     super(props);
 
+    // this.testProperty = this.testProperty.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getNewDate = this.getNewDate.bind(this);
     this.calculate = this.calculate.bind(this);
 
     // SET STARTER CALCULATUION
 
-    let MPR = this.props.APR1 / 100 / 12;
+    let MPR = this.props.creditScoreE / 100 / 12;
     let amount = this.props.valueA;
     let duration = this.props.valueD;
     let totalAmountToRepay = amount + amount * MPR * duration;
@@ -28,7 +29,7 @@ class LoanCalculator extends Component {
     // save props values in to the state
     this.state = {
       testProperty: '',
-      APR: this.props.APR1,
+      APR: this.props.creditScoreE,
       amountToRepay: Math.round(totalAmountToRepay).toFixed(),
       monthlyInst: Math.round(monthly).toFixed()
     };
@@ -76,37 +77,37 @@ class LoanCalculator extends Component {
     // if button credit history clicked set APR to choosen value
     switch (changedID) {
       case "Excellent":
-        this.setState({ APR: this.props.APR1 });
+        this.setState({ APR: this.props.creditScoreE });
         console.log("EVENT TIME: " + this.getNewDate());
         console.log(
           "NEW ACTION DETECTED: ID - " +
             e.target.id +
             ": has been clicked. New APR value is: " +
-            this.props.APR1 +
+            this.props.creditScoreE +
             "%"
         );
         break;
 
       case "Good":
-        this.setState({ APR: this.props.APR2 });
+        this.setState({ APR: this.props.creditScoreG });
         console.log("EVENT TIME: " + this.getNewDate());
         console.log(
           "NEW ACTION DETECTED: ID - " +
             e.target.id +
             ": has been clicked. New APR value is: " +
-            this.props.APR2 +
+            this.props.creditScoreG +
             "%"
         );
         break;
 
       case "Fair":
-        this.setState({ APR: this.props.APR3 });
+        this.setState({ APR: this.props.creditScoreF });
         console.log("EVENT TIME: " + this.getNewDate());
         console.log(
           "NEW ACTION DETECTED: ID - " +
             e.target.id +
             ": has been clicked. New APR value is: " +
-            this.props.APR3 +
+            this.props.creditScoreF +
             "%"
         );
         break;
@@ -158,17 +159,17 @@ class LoanCalculator extends Component {
       duration = parseFloat(this.state.valueDuration);
       switch (id) {
         case "Excellent":
-          aprNew = this.props.APR1;
+          aprNew = this.props.creditScoreE;
           MPR = aprNew / 100 / 12; // MPR monthly APR for calculation
           break;
 
         case "Good":
-          aprNew = this.props.APR2;
+          aprNew = this.props.creditScoreG;
           MPR = aprNew / 100 / 12; // MPR monthly APR for calculation
           break;
 
         case "Fair":
-          aprNew = this.props.APR3;
+          aprNew = this.props.creditScoreF;
           MPR = aprNew / 100 / 12; // MPR monthly APR for calculation
           break;
 
@@ -196,9 +197,16 @@ class LoanCalculator extends Component {
         <Row>
           <Col className="leftSide" xs={12} md={6}>
             <Form horizontal>
-              <FormMortgage/>
+              <FormMortgage />
               <FormDebt />
-              <FormPayment />
+              <FormPayment 
+                value={this.state.testProperty}
+                min={this.state.minAmount}
+                max={this.state.maxAmount}
+                onChange={this.update.bind(this)}
+                step={this.state.stepAmount}
+                currancy={this.props.currancy}
+              />
               <FormBorrow />
               <FormStatus />
               <FormDuration />
@@ -208,9 +216,9 @@ class LoanCalculator extends Component {
           <RightSide
             currancy={this.props.currancy}
             amount={this.state.testProperty}
-            // monthly={this.state.monthlyInst}
-            // APR={this.state.APR}
-            // btnOnClick={this.update.bind(this)}
+            monthly={this.state.monthlyInst}
+            APR={this.state.APR}
+            btnOnClick={this.update.bind(this)}
           />
         </Row>
       </Grid>
@@ -222,7 +230,17 @@ class LoanCalculator extends Component {
 // Assign deafault values to props
 
 LoanCalculator.defaultProps = {
-  
+  ARM5YR: 5.052,
+  FIX30YR: 4.835,
+  FIXVA30YR: 4.674,
+  FIX15YR: 4.478,
+
+  creditScoreE: 3.3,
+  creditScoreG: 9.6,
+  creditScoreF: 17.4,
+
+  // VaY: 
+  // VaN:
 
   currancy: "$"
 };

@@ -19,12 +19,12 @@ class FormDebt extends Component {
 
           <Col sm={12}>
           <FormGroup controlId="formControlsSelect">
-      <FormControl componentClass="select" placeholder="select">
-        <option value="select">Select</option>
-        <option value="other">Option1</option>
-        <option value="other">Option2</option>
-        <option value="other">Option3</option>
-        <option value="other">Option4</option>
+      <FormControl className="border-color" componentClass="select" placeholder="select">
+        <option value="select">Options</option>
+        <option value="other">30-Year Fix</option>
+        <option value="other">30-Year VA Fix</option>
+        <option value="other">15-Year Fix</option>
+        <option value="other">5-year ARM</option>
       </FormControl>
     </FormGroup>
           </Col>

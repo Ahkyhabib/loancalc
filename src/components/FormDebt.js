@@ -24,10 +24,6 @@ class FormDebt extends Component {
               type="text"
               placeholder="10,000"
             />
-            {/* <div id="amountValueDisplay">
-              {this.props.currancy}
-              {this.props.value}
-            </div> */}
           </Col>
         </Row>
       </FormGroup>
