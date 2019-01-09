@@ -7,41 +7,44 @@ class FormStatus extends Component {
       <FormGroup>
       <Row> 
            
-      <Col className="rightSide" xs={12} md={6}>
+      <Col className="" xs={12} md={6}>
       <h5 className="labelSlider">Your Credit History</h5>
         <ButtonGroup justified>
           <Button
             bsStyle="default"
             id="Excellent"
-            onClick={this.props.btnOnClick}
-          >
+            onClick={this.props.btnOnClick}>
             Excellent
           </Button>
-          <Button bsStyle="default" id="Good" onClick={this.props.btnOnClick}>
+          <Button 
+            bsStyle="default" 
+            id="Good" 
+            onClick={this.props.btnOnClick}>
             Good
           </Button>
-          <Button bsStyle="default" id="Fair" onClick={this.props.btnOnClick}>
+          <Button 
+            bsStyle="default" 
+            id="Fair" 
+            onClick={this.props.btnOnClick}>
             Fair
           </Button>
         </ButtonGroup>
       </Col>
       
-      <Col className="rightSide" xs={12} md={6}>
+      <Col className="" xs={12} md={6}>
           <h5 className="labelSlider" id="vet">Veteran Staus</h5>
              <ButtonGroup justified>
              <Button 
                bsStyle="default"
                id="vetStat"
-               onClick={this.props.btnOnClick}
-             >
-             I'm a vet 
+               onClick={this.props.btnOnClick}>
+               I'm a vet 
              </Button>
              <Button 
                bsStyle="default"
                id="vetStat"
-               onClick={this.props.btnOnClick}
-             >
-             I'm not a vet 
+               onClick={this.props.btnOnClick}>
+               I'm not a vet 
              </Button>
              </ButtonGroup>
           </Col>

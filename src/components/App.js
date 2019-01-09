@@ -207,7 +207,7 @@ class LoanCalculator extends Component {
 
           <RightSide
             currancy={this.props.currancy}
-            // amount={this.state.testProperty}
+            amount={this.state.testProperty}
             // monthly={this.state.monthlyInst}
             // APR={this.state.APR}
             // btnOnClick={this.update.bind(this)}
