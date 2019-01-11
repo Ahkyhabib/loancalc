@@ -42,7 +42,7 @@
 }
 
 .border-color {
-  border-color: #1a2b1a;
+  border-color: #9a9b9a;
   border-radius: 5px;
   width: 100%;
   height: 35px;
@@ -54,27 +54,27 @@ col.form-padding {
 }
 
 #vetStat {
-  border-color: #121712;
+  border-color: #9a9b9a;
   border-width: 2px;
   color: #2a6495;
   margin-top: 5px;
 }
 #Fair {
   margin-top: 5px;
-  border-color: #000000;
+  border-color: #9a9b9a;
   border-width: 2px;
   color: #2a6495;
   
 }
 #Good {
   margin-top: 5px;
-  border-color: #070b07;
+  border-color: #9a9b9a;
   border-width: 2px;
   color: #2a6495;
 }
 #Excellent {
   margin-top: 5px;
-  border-color: #080c08;
+  border-color: #9a9b9a;
   border-width: 2px;
   color: #2a6495;
 }
