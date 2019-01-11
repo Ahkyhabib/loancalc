@@ -110,3 +110,8 @@ LoanCalculator.defaultProps = {
       monthlyInst: Math.round(monthly).toFixed()
     };
   }
+
+  ===If you want to show interest rates on the rightside====
+
+  {/* <h4>APR</h4>
+                <span className="aprDisplay">{this.props.APR}%</span> */} 

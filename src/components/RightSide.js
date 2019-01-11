@@ -23,8 +23,7 @@ class RightSide extends Component {
           {this.props.monthly}
         </span>
 
-        {/* <h4>APR</h4>
-                <span className="aprDisplay">{this.props.APR}%</span> */}
+        
 
         
 

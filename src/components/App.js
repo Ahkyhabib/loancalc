@@ -201,10 +201,7 @@ class LoanCalculator extends Component {
               <FormDebt />
               <FormPayment 
                 value={this.state.testProperty}
-                min={this.state.minAmount}
-                max={this.state.maxAmount}
                 onChange={this.update.bind(this)}
-                step={this.state.stepAmount}
                 currancy={this.props.currancy}
               />
               <FormBorrow />
