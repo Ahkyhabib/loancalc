@@ -23,10 +23,6 @@ class RightSide extends Component {
           {this.props.monthly}
         </span>
 
-        
-
-        
-
         <ButtonToolbar className="next">
           <Button
             bsSize="large"

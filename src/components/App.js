@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "../css/App.css";
 import { Grid, Row, Col, Form } from "react-bootstrap";
-import RightSide from "./RightSide";
-import FormMortgage from "./FormMortgage";
-import FormDebt from "./FormDebt";
-import FormPayment from "./FormPayment";
-import FormBorrow from './FormBorrow';
-import FormStatus from './FormStatus';
-import FormDuration from './FormDuration';
+import RightSide from "./Form/RightSide";
+import FormMortgage from "./Form/Mortgage";
+import FormDebt from "./Form/Debt";
+import FormPayment from "./Form/Payment";
+import FormBorrow from './Form/Borrow';
+import FormStatus from './Form/Status';
+import FormDuration from './Form/Duration';
+import FormHValue from './Form/HValue';
+
 
 class LoanCalculator extends Component {
   constructor(props) {
@@ -197,6 +199,7 @@ class LoanCalculator extends Component {
         <Row>
           <Col className="leftSide" xs={12} md={6}>
             <Form horizontal>
+              <FormHValue />
               <FormMortgage />
               <FormDebt />
               <FormPayment 

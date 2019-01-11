@@ -1,29 +1,29 @@
 import React, { Component } from "react";
 import { Row, Col, FormGroup } from "react-bootstrap";
 
-class FormMortgage extends Component {
+class FormPayment extends Component {
   render() {
     return (
       <FormGroup>
-        <Row  className="fpadding" style={{ paddingBottom: 0}}>
+        <Row>
           <Col className="form-padding" sm={12}>
             <Row>
               <Col className="labelSlider" xs={12} sm={4}>
-                Mortgage Balance
+                Monthly Payments
               </Col>
               <Col className="descSlider" xs={12} sm={6}>
-                How much do you owe?
+                Overall amount paid every month?
               </Col>
             </Row>
           </Col>
 
           <Col sm={12}>
             <input
-              onChange={this.props.onChange}
+            onChange={this.props.onChange}
               className="border-color"
               id="formAmount"
               type="text"
-              placeholder="50,000"
+              placeholder="2,500"
             />
           </Col>
         </Row>
@@ -32,4 +32,4 @@ class FormMortgage extends Component {
   }
 }
 
-export default FormMortgage;
+export default FormPayment;

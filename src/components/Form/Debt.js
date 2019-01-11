@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Row, Col, FormGroup } from "react-bootstrap";
+import { Row, Col, FormGroup, Glyphicon, } from "react-bootstrap";
+// import TooltipTrigger from 'react-popper-tooltip';
+
 
 class FormDebt extends Component {
   render() {
@@ -9,11 +11,12 @@ class FormDebt extends Component {
           <Col className="form-padding" sm={12}>
             <Row>
               <Col className="labelSlider" xs={12} sm={4}>
-                Credit Debt 
+                Total Debts
               </Col>
               <Col className="descSlider" xs={12} sm={6}>
                 How much do you owe?
               </Col>
+              
             </Row>
           </Col>
 
