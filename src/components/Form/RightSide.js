@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Button, ButtonGroup, Col, ButtonToolbar } from "react-bootstrap";
+import Smart from "../Buttons/Smart";
+
 
 class RightSide extends Component {
   render() {
@@ -22,17 +24,19 @@ class RightSide extends Component {
           {this.props.currancy}
           {this.props.monthly}
         </span>
-
+      
         <ButtonToolbar className="next">
-          <Button
+          {/* <Button
             bsSize="large"
             bsStyle="success"
             onClick={this.props.btnOnClick}
-            href="https://www.rocketmortgage.com/?gclid=Cj0KCQiAmafhBRDUARIsACOKEROp6oOPmUaJVuOtYH0Jgi2YtluSt1MVAsZv4i4KIo5I5ql8_sVOJCoaAsJxEALw_wcB&qls=RBA_rocketme.0000000013&ef_id=Cj0KCQiAmafhBRDUARIsACOKEROp6oOPmUaJVuOtYH0Jgi2YtluSt1MVAsZv4i4KIo5I5ql8_sVOJCoaAsJxEALw_wcB:G:s&s_kwcid=AL!1083!3!320194990266!e!!g!!rocket%20mortgage&gclsrc=aw.ds"
+            href=""
           >
-            Click Next
-          </Button>
+            Get Your Savings Here
+          </Button> */}
+          
         </ButtonToolbar>
+         <Smart /> 
       </Col>
     );
   }
