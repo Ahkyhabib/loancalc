@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col, FormGroup } from "react-bootstrap";
+import ReactToolTip from 'react-tooltip';
+
 
 class Borrow extends Component {
   render() {
@@ -14,6 +16,10 @@ class Borrow extends Component {
               <Col className="descSlider" xs={12} sm={6}>
                 How much would you like to borrow?
               </Col>
+              <div>
+              <p className="info" data-tip="information">i</p> 
+              <ReactToolTip />
+              </div>
             </Row>
           </Col>
 

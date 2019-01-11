@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, FormGroup, Glyphicon, } from "react-bootstrap";
-// import TooltipTrigger from 'react-popper-tooltip';
+import ReactToolTip from 'react-tooltip';
 
 
 class FormDebt extends Component {
@@ -16,7 +16,10 @@ class FormDebt extends Component {
               <Col className="descSlider" xs={12} sm={6}>
                 How much do you owe?
               </Col>
-              
+              <div>
+              <p className="info" data-tip="information">i</p> 
+              <ReactToolTip />
+              </div>
             </Row>
           </Col>
 

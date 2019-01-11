@@ -9,6 +9,7 @@ import FormBorrow from './Form/Borrow';
 import FormStatus from './Form/Status';
 import FormDuration from './Form/Duration';
 import FormHValue from './Form/HValue';
+import Tooltip from './Tooltip';
 
 
 class LoanCalculator extends Component {
@@ -210,6 +211,7 @@ class LoanCalculator extends Component {
               <FormBorrow />
               <FormStatus />
               <FormDuration />
+              <Tooltip />
             </Form>
           </Col>
 

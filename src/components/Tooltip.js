@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import TooltipTrigger from 'react-popper-tooltip';
+import ReactToolTip from 'react-tooltip';
 
 
-class Tooltip extends Component {
+export default class Tooltip extends Component {
   render() {
     return (
       <div>
@@ -11,5 +11,3 @@ class Tooltip extends Component {
     )
   }
 }
-
-export default Tooltip;

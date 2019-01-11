@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, FormGroup, Tooltip } from "react-bootstrap";
+import ReactToolTip from 'react-tooltip';
 
 class FormMortgage extends Component {
   render() {
@@ -14,11 +15,11 @@ class FormMortgage extends Component {
               <Col className="descSlider" xs={12} sm={6}>
                 How much do you owe?
               </Col>
-            
-              <Tooltip placement="right" className="in" id="tooltip-right">
-                Tooltip right
-              </Tooltip>
-           
+              <div>
+              <p className="info" data-tip="information">i</p> 
+              <ReactToolTip />
+              </div>
+              
             </Row>
           </Col>
 
