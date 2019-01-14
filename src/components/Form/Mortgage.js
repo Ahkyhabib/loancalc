@@ -1,12 +1,23 @@
 import React, { Component } from "react";
 import { Row, Col, FormGroup, Tooltip } from "react-bootstrap";
-import ReactToolTip from 'react-tooltip';
+import Debt from "./Debt";
 
 class FormMortgage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isHidden: true
+    };
+  }
+  toggleHidden() {
+    this.setState({
+      isHidden: !this.state.isHidden
+    });
+  }
   render() {
     return (
-      <FormGroup>
-        <Row  className="fpadding" style={{ paddingBottom: 0}}>
+      <FormGroup className="fadeIn animate mortHide" id="mortFade mortHide">
+        <Row className="fpadding" style={{ paddingBottom: 0 }}>
           <Col className="form-padding" sm={12}>
             <Row>
               <Col className="labelSlider" xs={12} sm={4}>
@@ -16,26 +27,30 @@ class FormMortgage extends Component {
                 How much do you owe?
               </Col>
               <div>
-              <p className="info" data-tip="information">i</p> 
-              <ReactToolTip />
+                <p className="info" data-tip="information">
+                  i
+                </p>
+                {/* <ReactToolTip /> */}
               </div>
-              
             </Row>
           </Col>
 
           <Col sm={12}>
             <input
-              onChange={this.props.onChange}
+              onClick={this.toggleHidden.bind(this)}
               className="border-color"
               id="formAmount"
               type="text"
               placeholder="50,000"
             />
+            {!this.state.isHidden && <Child />}
           </Col>
         </Row>
       </FormGroup>
     );
   }
 }
+
+const Child = () => <div className="mortHide">{<Debt />}</div>;
 
 export default FormMortgage;

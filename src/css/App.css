@@ -9,7 +9,7 @@
 .leftSide {
   background-color: rgb(255, 255, 255);
   padding: 20px 20px 30px 20px;
-  border: 1px solid #e6e3e3;
+  border: 1px solid #ffffff;
   text-align: center;
 }
 .labelSlider {
@@ -28,7 +28,7 @@
 }
 .descSlider {
   padding: 0 2px 0 0;
-  margin-top:30px;
+  margin-top: 30px;
   margin-bottom: 0;
 }
 
@@ -46,7 +46,6 @@
   border-radius: 5px;
   width: 100%;
   height: 35px;
-  
 }
 
 col.form-padding {
@@ -64,7 +63,6 @@ col.form-padding {
   border-color: #9a9b9a;
   border-width: 2px;
   color: #2a6495;
-  
 }
 #Good {
   margin-top: 5px;
@@ -91,24 +89,21 @@ col.form-padding {
   margin-right: auto;
 }
 .info {
-  margin-top:30px;
+  margin-top: 30px;
   margin-bottom: 0;
   margin-right: 25px;
   background-color: rgb(36, 58, 184);
   color: #fff;
   border-radius: 50%;
-  width: 20px; 
+  width: 20px;
   height: 20px;
   font-family: "Courier New", Courier, monospace;
 }
 
-
-
-
 /* =========== RIGHT SIDE ==============*/
 .rightSide {
   text-align: center;
-  padding-top: 20px
+  padding-top: 20px;
 }
 
 .rightSide h4 {
@@ -132,22 +127,18 @@ col.form-padding {
 .next {
   padding: 20px 0px 10px 150px;
   align-items: center;
+  text-align: center;
 }
 
 .next.on:after {
-  
-    content: "Hide";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
- 
-
+  content: "Hide";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
 }
-
-
 
 /* =========== INPUT CSS =================*/
 input[type="range"] {
@@ -241,4 +232,35 @@ input[type="range"]:focus::-ms-fill-upper {
   .rightSide span {
     font-size: 40px;
   }
+}
+
+/* ==========Animation============= */
+
+/* ==========Fade In Animation======== */
+.animate {
+  -webkit-animation-duration: 10s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

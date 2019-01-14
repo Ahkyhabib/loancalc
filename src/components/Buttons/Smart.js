@@ -1,34 +1,33 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 
+class Smart extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isToggleOn: true };
 
- class Smart extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {isToggleOn: true};
-    
-        // This binding is necessary to make `this` work in the callback
-        this.handleClick = this.handleClick.bind(this);
-      }
-    
-      handleClick() {
-        this.setState(prevState => ({
-          isToggleOn: !prevState.isToggleOn
-        }));
-      }
-    
-      render() {
-        return (
-          <Button 
-            classNale="next" 
-            bsSize="large"
-            bsStyle="success"
-            onClick={this.handleClick}>
-            {this.state.isToggleOn ? 'Get Your Savings Here' : 'Recalculate'}
-          </Button>
-        );
-      }
-    }
-   
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-    export default Smart;
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      <Button
+        classNale="next"
+        bsSize="large"
+        bsStyle="success"
+        onClick={this.handleClick}
+      >
+        {this.state.isToggleOn ? "Get Your Savings Here" : "Recalculate"}
+      </Button>
+    );
+  }
+}
+
+export default Smart;
