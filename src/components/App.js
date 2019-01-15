@@ -9,7 +9,8 @@ import Borrow from "./Form/Borrow";
 import Status from "./Form/Status";
 import Duration from "./Form/Duration";
 import HValue from "./Form/HValue";
-//import Toggle from "./Buttons/Toggle";
+import Toggle from "./Buttons/Toggle";
+import Header from "./Form/Header";
 
 class LoanCalculator extends Component {
   constructor() {
@@ -26,10 +27,12 @@ class LoanCalculator extends Component {
   render() {
     return (
       <Grid className="show-grid mainContainer">
+        <Header />
         <Row>
           <Col className="leftSide" xs={12} md={6}>
             <Form horizontal>
               <HValue className="valFade" />
+              <Toggle />
               {/* <Mortgage className="mortFade" id="mortHide" /> */}
               {/* <Debt className="debtFade" /> */}
               {/* <Payment /> */}

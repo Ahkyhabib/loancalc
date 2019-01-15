@@ -25,14 +25,6 @@ class RightSide extends Component {
         </span>
 
         <ButtonToolbar className="next">
-          {/* <Button
-            bsSize="large"
-            bsStyle="success"
-            onClick={this.props.btnOnClick}
-            href=""
-          >
-            Get Your Savings Here
-          </Button> */}
         </ButtonToolbar>
         <Smart id="smartFade smartHide" />
       </Col>
