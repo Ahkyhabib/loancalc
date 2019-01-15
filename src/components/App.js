@@ -11,28 +11,30 @@ import Duration from "./Form/Duration";
 import HValue from "./Form/HValue";
 import Toggle from "./Buttons/Toggle";
 import Header from "./Form/Header";
+import TestCard from "./Cards/TestCard";
 
 class LoanCalculator extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isHidden: true
-    };
-  }
-  toggleHidden() {
-    this.setState({
-      isHidden: !this.state.isHidden
-    });
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     isHidden: true
+  //   };
+  // }
+  // toggleHidden() {
+  //   this.setState({
+  //     isHidden: !this.state.isHidden
+  //   });
+  // }
   render() {
     return (
       <Grid className="show-grid mainContainer">
         <Header />
         <Row>
           <Col className="leftSide" xs={12} md={6}>
+            {/* <Toggle /> */}
             <Form horizontal>
               <HValue className="valFade" />
-              <Toggle />
+
               {/* <Mortgage className="mortFade" id="mortHide" /> */}
               {/* <Debt className="debtFade" /> */}
               {/* <Payment /> */}
@@ -41,7 +43,7 @@ class LoanCalculator extends Component {
               {/* <Duration /> */}
             </Form>
           </Col>
-
+          {/* <TestCard /> */}
           <RightSide />
         </Row>
       </Grid>
