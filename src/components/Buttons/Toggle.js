@@ -1,46 +1,33 @@
 import React, { Component } from "react";
-import Borrow from "../Form/Borrow";
 import { Button } from "react-bootstrap";
 
-export default class Toggle extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isHidden: true
-    };
+class Smart extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isToggleOn: true };
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
   }
-  toggleHidden() {
-    this.setState({
-      isHidden: !this.state.isHidden
-    });
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
   }
+
   render() {
     return (
-      <div>
-        <button onClick={this.toggleHidden.bind(this)}>-></button>
-        {!this.state.isHidden && <Child />}
-      </div>
+      <Button
+        classNale="next1"
+        bsSize="large"
+        bsStyle="success"
+        onClick={this.handleClick}
+      >
+        {this.state.isToggleOn ? "Get Your Savings Here" : "Recalculate"}
+      </Button>
     );
   }
 }
 
-const Child = () => <div className="mortHide">{<Borrow />}</div>;
-
-//   state = {
-//     on: false
-//   };
-
-//   toggle = () => {
-//     this.setstate({
-//       on: !this.state.on
-//     });
-//   };
-
-//   render() {
-//     return (
-//       <div>
-//         {this.state.on && <Borrow />}
-//         <button onClick={this.toggle}>Next</button>
-//       </div>
-//     );
-//   }
+export default Smart;
